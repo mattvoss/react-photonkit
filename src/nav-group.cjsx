@@ -20,13 +20,8 @@ module.exports = React.createClass
     draggable: false
 
   renderNav: (child, index) ->
-    active = @state.activeKey == child.props.eventKey
     React.cloneElement child,
-      active: active
       key: "nav-group-item-#{index}"
-      onClick: () =>
-        @setState activeKey: child.props.eventKey
-        @props.onSelect child.props.eventKey if @props.onSelect
 
   sortableOptions:
     ref: "navs"

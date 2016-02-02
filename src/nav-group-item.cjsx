@@ -26,4 +26,5 @@ module.exports = React.createClass
 
     <a {...@props} className={className}>
       {icon}{@props.text}
+      {@props.children}
     </a>
